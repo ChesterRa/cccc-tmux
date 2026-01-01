@@ -1,7 +1,7 @@
 actors:
   claude:
     peer:
-      command: "claude --dangerously-skip-permissions"
+      command: "claude --dangerously-skip-permissions --search"
       input_mode: "paste"
       post_paste_keys: ["Enter"]
       send_sequence: "Enter"
@@ -110,7 +110,7 @@ actors:
 
   copilot:
     peer:
-      command: "copilot"
+      command: "copilot --allow-all-tools --allow-all-paths"
       input_mode: "paste"
       post_paste_keys: ["Enter"]
       send_sequence: "Enter"

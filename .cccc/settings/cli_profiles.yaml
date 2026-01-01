@@ -36,7 +36,7 @@ delivery:
     policy: compact
     interval_handoffs: 0
   auto_compact:
-    enabled: true
+    enabled: false  # Disabled by default - modern agents have built-in context compression
     min_interval_seconds: 900
     min_messages_since_last: 6
     idle_threshold_seconds: 120
