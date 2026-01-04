@@ -1,3 +1,5 @@
+> ⚠️ **レガシーバージョンについて**: このリポジトリは **CCCC v0.3.x tmux版** を維持しています。最新の **v0.4 web版** は [github.com/ChesterRa/cccc](https://github.com/ChesterRa/cccc) をご覧ください。
+
 # CCCC Pair — デュアルAI自律協調オーケストレーター
 
 [English](README.md) | [中文](README.zh-CN.md) | **日本語**
@@ -229,10 +231,10 @@ go install github.com/opencode-ai/opencode@latest
 ```bash
 # 方法1：pipx（推奨、環境を自動隔離）
 pip install pipx  # pipxがなければ先にインストール
-pipx install cccc-pair
+pipx install cccc-pair==0.3.29
 
 # 方法2：pip
-pip install cccc-pair
+pip install cccc-pair==0.3.29
 ```
 
 ### ステップ3：初期化と起動

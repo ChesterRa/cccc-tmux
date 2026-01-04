@@ -1,3 +1,5 @@
+> ⚠️ **旧版本说明**: 本仓库维护的是 **CCCC v0.3.x tmux版本**。最新的 **v0.4 web版本** 请访问 [github.com/ChesterRa/cccc](https://github.com/ChesterRa/cccc)。
+
 # CCCC Pair — 双AI自主协作编排器
 
 [English](README.md) | **中文** | [日本語](README.ja.md)
@@ -229,10 +231,10 @@ go install github.com/opencode-ai/opencode@latest
 ```bash
 # 方式一：用pipx（推荐，自动隔离环境）
 pip install pipx  # 如果没有pipx先安装
-pipx install cccc-pair
+pipx install cccc-pair==0.3.29
 
 # 方式二：用pip
-pip install cccc-pair
+pip install cccc-pair==0.3.29
 ```
 
 ### 第三步：初始化并启动

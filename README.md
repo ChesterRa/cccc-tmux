@@ -1,3 +1,5 @@
+> ⚠️ **Legacy Version Notice**: This repository maintains the **CCCC v0.3.x tmux-based version**. For the latest **v0.4 web version**, please visit [github.com/ChesterRa/cccc](https://github.com/ChesterRa/cccc).
+
 # CCCC Pair — Modern Multi-Agent Orchestrator
 
 **English** | [中文](README.zh-CN.md) | [日本語](README.ja.md)
@@ -202,10 +204,10 @@ Located at repo root. **Automatically injected into Foreman.** Foreman runs ever
 ```bash
 # Option 1: pipx (Recommended - auto-isolates environment)
 pip install pipx  # if you don't have pipx
-pipx install cccc-pair
+pipx install cccc-pair==0.3.29
 
 # Option 2: pip
-pip install cccc-pair
+pip install cccc-pair==0.3.29
 ```
 
 ---
