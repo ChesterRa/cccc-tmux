@@ -1,7 +1,7 @@
 actors:
   claude:
     peer:
-      command: "claude --dangerously-skip-permissions --search"
+      command: "claude --dangerously-skip-permissions"
       input_mode: "paste"
       post_paste_keys: ["Enter"]
       send_sequence: "Enter"
@@ -19,7 +19,7 @@ actors:
 
   codex:
     peer:
-      command: "codex --dangerously-bypass-approvals-and-sandbox"
+      command: "codex --dangerously-bypass-approvals-and-sandbox --search"
       input_mode: "paste"
       post_paste_keys: ["Enter"]
       send_sequence: "Enter"

@@ -231,10 +231,10 @@ go install github.com/opencode-ai/opencode@latest
 ```bash
 # 方式一：用pipx（推荐，自动隔离环境）
 pip install pipx  # 如果没有pipx先安装
-pipx install cccc-pair==0.3.29
+pipx install cccc-pair==0.3.30
 
 # 方式二：用pip
-pip install cccc-pair==0.3.29
+pip install cccc-pair==0.3.30
 ```
 
 ### 第三步：初始化并启动

@@ -204,10 +204,10 @@ Located at repo root. **Automatically injected into Foreman.** Foreman runs ever
 ```bash
 # Option 1: pipx (Recommended - auto-isolates environment)
 pip install pipx  # if you don't have pipx
-pipx install cccc-pair==0.3.29
+pipx install cccc-pair==0.3.30
 
 # Option 2: pip
-pip install cccc-pair==0.3.29
+pip install cccc-pair==0.3.30
 ```
 
 ---
