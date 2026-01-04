@@ -349,12 +349,14 @@ def tmux_start_interactive(pane: str, cmd: str, *, stderr_log: Optional[str] = N
     else:
         cmd_with_prep = cmd
 
-    # Respawn pane with command
-    # Use bash -ilc (interactive + login) to ensure:
-    # 1. Login shell reads ~/.profile or ~/.bash_profile
-    # 2. Interactive flag ensures ~/.bashrc is sourced (needed for nvm, pyenv, etc.)
-    # This fixes issues on Ubuntu 22.04 where nvm-installed CLIs aren't in PATH
-    success = tmux_respawn_pane(pane, f"bash -ilc {shlex.quote(cmd_with_prep)}")
+    # Respawn pane with command using user's default shell
+    # Use $SHELL -ilc (interactive + login) to ensure:
+    # 1. Login shell reads user's shell config (~/.zshrc, ~/.bashrc, etc.)
+    # 2. Interactive flag ensures proper environment setup (needed for nvm, pyenv, etc.)
+    # 3. Respects user's shell choice - fixes issues where CLIs installed via shell
+    #    config (like claude installed in zsh) aren't found when using hardcoded bash
+    user_shell = os.environ.get("SHELL", "/bin/bash")
+    success = tmux_respawn_pane(pane, f"{user_shell} -ilc {shlex.quote(cmd_with_prep)}")
 
     # Set remain-on-exit for this pane if requested
     # This keeps the pane visible after process exits, allowing inspection
